@@ -10,5 +10,45 @@ body {
     height: 80%;
     background-color: beige;
     border-radius: 40px;
-    border: solid 10px 
+    border: solid 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game-grid {
+    width: 80%;
+    max-width: 516px;
+    height: 70%;
+    background-color: yellow;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.circle-thing-container {
+    width: 1fr;
+    height: 1fr;
+    display: grid;
+    place-items: center;
+}
+
+.circle-thing {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.drop-button {
+    width: 1fr;
+    height: 1fr;
+    background-color: black;
+}
+
+.control-button {
+    width: 100px;
+    height: 60px;
+    margin-inline: auto;
 }
