@@ -1,7 +1,10 @@
+// all of this code exists purely to minimize html work by creating elements in here
+
 const gameGrid = document.getElementById('game-grid');
 const startButton = document.getElementById('start-button');
 const columns = 7; // Number of columns
 const rows = 6; // Number of rows
+
 
 startButton.addEventListener('click', () => setupGame());
 
@@ -19,9 +22,10 @@ function setupGame() {
 
 function addButtons(columnIndex) {
     const button = document.createElement('button');
-    button.className = 'drop-button';
+    button.className = `drop-button`;
+    button.id = `drop-button-${columnIndex}`;
     button.dataset.column = columnIndex; // Store the column index
-    button.addEventListener('click', () => dropChecker(columnIndex));
+    button.addEventListener('click', () => {dropChecker(columnIndex); checkForFull(columnIndex)});
     gameGrid.appendChild(button);
 }
 
@@ -38,4 +42,7 @@ function addGameBoard(rowIndex, columnIndex) {
     gameGrid.appendChild(circleThingContainer);
 }
 
+function dropChecker(columnIndex) {
+    console.log(`Dropped checker in column ${columnIndex}`)
 
+}
