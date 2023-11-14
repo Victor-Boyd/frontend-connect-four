@@ -37,12 +37,12 @@ function addGameBoard(rowIndex, columnIndex) {
 
     const circleThing = document.createElement('div');
     circleThing.className = 'circle-thing';
+    circleThing.id = `circle-thing-row${rowIndex}-column${columnIndex}`
+    circleThingContainer.dataset.row = rowIndex;
+    circleThingContainer.dataset.column = columnIndex;
     circleThingContainer.appendChild(circleThing);
 
     gameGrid.appendChild(circleThingContainer);
 }
 
-function dropChecker(columnIndex) {
-    console.log(`Dropped checker in column ${columnIndex}`)
 
-}
