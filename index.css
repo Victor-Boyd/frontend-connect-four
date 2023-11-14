@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    width: 70%;
+    height: 80%;
+    background-color: beige;
+    border-radius: 40px;
+    border: solid 10px 
+}
